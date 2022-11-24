@@ -1,0 +1,23 @@
+html 
+    head 
+        title Gallery 
+    body 
+        include bootstrap.html
+        include header.pug
+
+        -const array = ['https://images.unsplash.com/photo-1669260056243-242b9d408c0f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80', 'https://images.unsplash.com/photo-1533750516457-a7f992034fec?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=906&q=80', 'https://images.unsplash.com/photo-1557804506-669a67965ba0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80', 'https://images.unsplash.com/photo-1560472354-b33ff0c44a43?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=951&q=80', 'https://images.unsplash.com/photo-1563986768494-4dee2763ff3f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80', 'https://images.unsplash.com/photo-1533749871411-5e21e14bcc7d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=871&q=80', 'https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=455&q=80'];
+        //- .container
+        //-     each i in array
+        //-         .card(style='width: 18rem;')
+        //-             img.card-img-top(src=i alt='error')
+        //-             .card-body
+        //-                 h5.card-title Card title
+        //-                 p.card-text
+        //-                 | Some quick example text to build on the card title and make up the bulk of the card&apos;s content.
+        //-                 a.btn.btn-primary(href='#') Go somewhere
+        .container
+            each i in array
+                .row
+                    .col-sm-6
+                        .card(style='width: 18rem;')
+                        img.card-img-top(src=i alt='...')
